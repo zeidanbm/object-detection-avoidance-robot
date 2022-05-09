@@ -55,6 +55,7 @@ def left():
 
 
 def stop():
+    print('Stop Triggered...')
     GPIO.output(L1, GPIO.LOW)
     GPIO.output(L2, GPIO.LOW)
 
@@ -63,6 +64,7 @@ def stop():
 
 
 def distance():
+    print('Measuring Distance...')
     GPIO.output(trig, GPIO.HIGH)
 
     time.sleep(0.00001)
@@ -84,6 +86,7 @@ def distance():
 
 
 def take_snapshot():
+  print('Taking snapshopt...')
   image = '/home/pi/Desktop/image.jpg'
   camera = PiCamera()
   camera.start_preview()
